@@ -1,0 +1,1274 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys" ],
+    "title" : {
+      "en" : "Flight Satisfaction Surveys Ontology"
+    },
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "labels" : {
+      "en" : "Flight Satisfaction Surveys Ontology"
+    },
+    "comments" : {
+      "en" : "Ontology of Flight Satisfaction Surveys, by Alejandro Roldán Soblechero"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "https://creativecommons.org/licenses/by-sa/4.0/",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This ontology is designed to represent and organize information derived from airline passenger satisfaction surveys, with an initial focus on Qatar Airways and Ryanair. The ontology will allow the capture, consultation and analysis of data on the passenger experience.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Flight Satisfaction Surveys Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://dbpedia.org/page/City",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "City Liverpool"
+      },
+      "labels" : {
+        "IRI-based" : "Liverpool",
+        "en" : "Liverpool"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "City Edinburgh"
+      },
+      "labels" : {
+        "IRI-based" : "Edinburgh",
+        "en" : "Edinburgh"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "City Doha"
+      },
+      "labels" : {
+        "IRI-based" : "Doha",
+        "en" : "Doha"
+      }
+    } ],
+    "comment" : {
+      "en" : "An urban area that serves as a hub."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/LeisureTraveller",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LeisureTraveller",
+      "en" : "Leisure Traveller"
+    },
+    "comment" : {
+      "en" : "A passenger who travels primarily for leisure or vacation purposes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlightReview",
+      "en" : "Flight Review"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_02",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Review of Economy Class on Flight EDI-LPL by Sarah Johnson"
+      },
+      "labels" : {
+        "IRI-based" : "Flight_Review_02",
+        "en" : "Flight Review 02"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_01",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Review of Business Class on Flight DOH-LPL by Ali Al-Hamed"
+      },
+      "labels" : {
+        "IRI-based" : "Flight_Review_01",
+        "en" : "Flight Review 01"
+      }
+    } ],
+    "comment" : {
+      "en" : "A  evaluation or feedback provided by a passenger regarding their experience on a flight."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/InternationalFlight",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InternationalFlight",
+      "en" : "International Flight"
+    },
+    "comment" : {
+      "en" : "A flight that crosses international boundaries between two or more countries."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Aircraft",
+      "en" : "Aircraft"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airbus_A380",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Aircraft model of Airbus A380"
+      },
+      "labels" : {
+        "IRI-based" : "Airbus_A380",
+        "en" : "Airbus A380"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Boeing_787",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Aircraft model of Boeing 787"
+      },
+      "labels" : {
+        "IRI-based" : "Boeing_787",
+        "en" : "Boeing 787"
+      }
+    } ],
+    "comment" : {
+      "en" : "A vehicle designed for air transport"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "Place"
+    },
+    "subClasses" : [ "7", "12", "8" ],
+    "comment" : {
+      "en" : "A location that can be geographically identified."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Airline",
+      "en" : "Airline"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar_Airways",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Qatar Airways Airline"
+      },
+      "labels" : {
+        "IRI-based" : "Qatar_Airways",
+        "en" : "Qatar Airways"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ryanair",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Ryanair Airline"
+      },
+      "labels" : {
+        "IRI-based" : "Ryanair",
+        "en" : "Ryanair"
+      }
+    } ],
+    "comment" : {
+      "en" : "A company that provides air transport services"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Pilot",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Pilot",
+      "en" : "Pilot"
+    },
+    "comment" : {
+      "en" : "A crew member trained and certified to operate an aircraft."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrewMember",
+      "en" : "Crew Member"
+    },
+    "subClasses" : [ "30", "32" ],
+    "comment" : {
+      "en" : "An individual who is part of the flight staff"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/GroundService",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroundService",
+      "en" : "Ground Service"
+    },
+    "comment" : {
+      "en" : "Services provided at the airport before departure or after arrival, including check-in and baggage handling."
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Flight",
+      "en" : "Flight"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_DOH-LPL_01",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Flight 01 from Doha to Liverpool"
+      },
+      "labels" : {
+        "IRI-based" : "Flight_DOH-LPL_01",
+        "en" : "Flight DOH-LPL 01"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_EDI-LPL_01",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Flight 01 from Edinburgh to Liverpool"
+      },
+      "labels" : {
+        "IRI-based" : "Flight_EDI-LPL_01",
+        "en" : "Flight EDI-LPL 01"
+      }
+    } ],
+    "subClasses" : [ "18", "36" ],
+    "comment" : {
+      "en" : "A scheduled journey of an aircraft from one airport to another."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightAttendant",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlightAttendant",
+      "en" : "Flight Attendant"
+    },
+    "comment" : {
+      "en" : "A crew member who ensures the safety and comfort of passengers aboard a flight."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Passenger",
+      "en" : "Passenger"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Sarah_Johnson",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Sarah Johnson Passenger"
+      },
+      "labels" : {
+        "IRI-based" : "Sarah_Johnson",
+        "en" : "Sarah Johnson"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ali_Al-Hamed",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Ali Al-Hamed Passenger"
+      },
+      "labels" : {
+        "IRI-based" : "Ali_Al-Hamed",
+        "en" : "Ali Al-Hamed"
+      }
+    } ],
+    "subClasses" : [ "16", "43" ],
+    "comment" : {
+      "en" : "An individual who travels in an aircraft, potentially with different travel purposes and preferences."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://dbpedia.org/page/Country",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Country Qatar"
+      },
+      "labels" : {
+        "IRI-based" : "Qatar",
+        "en" : "Qatar"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Country United Kingdom"
+      },
+      "labels" : {
+        "IRI-based" : "United_Kingdom",
+        "en" : "United Kingdom"
+      }
+    } ],
+    "comment" : {
+      "en" : "A distinct territorial body or political entity known for its sovereignty and governance."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessClassSeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessClassSeat",
+      "en" : "Business Class Seat"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Business_Class_Seat_1A_on_Flight_DOH-LPL",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Business Class Seat 1A on Flight DOH-LPL"
+      },
+      "labels" : {
+        "IRI-based" : "Business_Class_Seat_1A_on_Flight_DOH-LPL",
+        "en" : "Business Class Seat 1A on Flight DOH-LPL"
+      }
+    } ],
+    "comment" : {
+      "en" : "A high-comfort seat, typically found in the business class section of an aircraft."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "56",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "en" : "Service"
+    },
+    "subClasses" : [ "35", "23" ],
+    "comment" : {
+      "en" : "Services provided by the airline to enhance passenger experience."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "en",
+        "value" : "https://dbpedia.org/page/Airport",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Airport",
+      "en" : "Airport"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool_John_Lennon_Airport",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Liverpool John Lennon Airport"
+      },
+      "labels" : {
+        "IRI-based" : "Liverpool_John_Lennon_Airport",
+        "en" : "Liverpool John Lennon Airport"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha_Airport",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Doha Airport"
+      },
+      "labels" : {
+        "IRI-based" : "Doha_Airport",
+        "en" : "Doha Airport"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh_Airport",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Edinburgh Airport"
+      },
+      "labels" : {
+        "IRI-based" : "Edinburgh_Airport",
+        "en" : "Edinburgh Airport"
+      }
+    } ],
+    "comment" : {
+      "en" : "A facility used for the arrival, departure, and maintenance of aircraft, equipped with runways and passenger facilities."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CabinService",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CabinService",
+      "en" : "Cabin Service"
+    },
+    "comment" : {
+      "en" : "Services offered inside the aircraft cabin, such as meals, drinks, and in-flight entertainment."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Seat",
+      "en" : "Seat"
+    },
+    "subClasses" : [ "21", "29", "27" ],
+    "comment" : {
+      "en" : "A specific place for a passenger to sit in an aircraft."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FirstClassSeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FirstClassSeat",
+      "en" : "First Class Seat"
+    },
+    "comment" : {
+      "en" : "The most spacious seat available on an aircraft, offering premium services."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessTraveller",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessTraveller",
+      "en" : "Business Traveller"
+    },
+    "comment" : {
+      "en" : "A passenger who travels primarily for business purposes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/DomesticFlight",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DomesticFlight",
+      "en" : "Domestic Flight"
+    },
+    "comment" : {
+      "en" : "A flight that takes place within the boundaries of a single country."
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/EconomySeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EconomySeat",
+      "en" : "Economy Seat"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Economy_Class_Seat_23C_on_Flight_EDI-LPL",
+      "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+      "comment" : {
+        "en" : "Economy Class Seat 23C on Flight EDI-LPL"
+      },
+      "labels" : {
+        "IRI-based" : "Economy_Class_Seat_23C_on_Flight_EDI-LPL",
+        "en" : "Economy Class Seat 23C on Flight EDI-LPL"
+      }
+    } ],
+    "comment" : {
+      "en" : "A standard seat within the main cabin area, optimized for density and affordability."
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "69",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "reviewOfFlight",
+      "en" : "review of flight"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Associates a review with the specific flight it addresses."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/receivesService",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "receivesService",
+      "en" : "receives service"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Links a seat to specific services provided during a flight, reflecting the level and type of service based on the seat’s location and class."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "arrivesAtAirport",
+      "en" : "arrives at airport"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The airport at which the flight arrives."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/livesInCountry",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "livesInCountry",
+      "en" : "lives in country"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Indicates the country where the passenger resides."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "operatedByAirline",
+      "en" : "operated by airline"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Indicates the airline that operates a specific flight."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "isPartOfCountry",
+      "en" : "is part of country"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Indicates the country in which the city is located."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/providesService",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "providesService",
+      "en" : "provides service"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Associates an airline with the services it provides, such as cabin or ground services."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "17"
+  }, {
+    "range" : "4",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "5",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "The name of the geographical location, such as a city, country, or airport."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "24"
+  }, {
+    "range" : "4",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "4",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "rating",
+      "en" : "rating"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The rating given by a passenger in a flight review."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "departsFromAirport",
+      "en" : "departs from airport"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The airport from which the flight departs."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "reviewedByPassenger",
+      "en" : "reviewed by passenger"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Connects a flight review to the passenger who wrote the review."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/number",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "number",
+      "en" : "number"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The unique identifier for each flight."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasAssignedSeat",
+      "en" : "has assigned seat"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Connects a passenger to a specific seat they are assigned on a flight."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "41"
+  }, {
+    "range" : "11",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "11",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "5",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasAircraft",
+      "en" : "has aircraft"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Associates a flight with a specific aircraft used for that flight."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "46"
+  }, {
+    "range" : "31",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "2",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "2",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/worksOnFlight",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "worksOnFlight",
+      "en" : "works on flight"
+    },
+    "domain" : "31",
+    "comment" : {
+      "en" : "Connects a crew member to the flights they work on."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/verified",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "verified",
+      "en" : "verified"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates whether the flight review has been verified as authentic by the airline or a third-party platform."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasSeat",
+      "en" : "has seat"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Links a flight to the specific seat occupied during the flight."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasSeat",
+      "en" : "has seat"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Links a flight to the specific seat occupied during the flight."
+    },
+    "attributes" : [ "external", "object", "allValues", "functional" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/comment",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "comment",
+      "en" : "comment"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "The detailed text content of the flight review."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "locatedInCity",
+      "en" : "located in city"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Indicates the city where the airport is located."
+    },
+    "attributes" : [ "external", "object", "functional" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/title",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "title",
+      "en" : "title"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The title of the flight review, providing a brief summary or headline."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/recommendationStatus",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "recommendationStatus",
+      "en" : "recommendation status"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates whether the passenger recommends the flight or not, represented as a boolean value."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/date",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "date",
+      "en" : "date"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "The date on which the flight takes place."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/model",
+    "baseIri" : "http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "model",
+      "en" : "model"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "The model of the aircraft used for a flight."
+    },
+    "attributes" : [ "external", "datatype", "functional" ],
+    "id" : "69"
+  } ]
+}
