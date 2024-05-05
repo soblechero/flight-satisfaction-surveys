@@ -1,0 +1,930 @@
+@prefix : <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys#> .
+
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys> rdf:type owl:Ontology ;
+                                                                                       owl:versionIRI <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/1.0.0> ;
+                                                                                       <http://purl.org/dc/terms/abstract> "This ontology is designed to represent and organize information derived from airline passenger satisfaction surveys, with an initial focus on Qatar Airways and Ryanair. The ontology will allow the capture, consultation and analysis of data on the passenger experience."@en ;
+                                                                                       <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by-sa/4.0/"@en ;
+                                                                                       <http://purl.org/dc/terms/title> "Flight Satisfaction Surveys Ontology"@en ;
+                                                                                       rdfs:comment "Ontology of Flight Satisfaction Surveys, by Alejandro Roldán Soblechero"@en ;
+                                                                                       rdfs:label "Flight Satisfaction Surveys Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> rdf:type owl:ObjectProperty ,
+                                                                                                                owl:FunctionalProperty ;
+                                                                                                       rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                       rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                       rdfs:comment "The airport at which the flight arrives."@en ;
+                                                                                                       rdfs:label "arrives at airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> rdf:type owl:ObjectProperty ,
+                                                                                                                  owl:FunctionalProperty ;
+                                                                                                         rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                         rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                         rdfs:comment "The airport from which the flight departs."@en ;
+                                                                                                         rdfs:label "departs from airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft> rdf:type owl:ObjectProperty ,
+                                                                                                           owl:FunctionalProperty ;
+                                                                                                  rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                  rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft> ;
+                                                                                                  rdfs:comment "Associates a flight with a specific aircraft used for that flight."@en ;
+                                                                                                  rdfs:label "has aircraft"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat> rdf:type owl:ObjectProperty ,
+                                                                                                               owl:FunctionalProperty ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                                      rdfs:comment "Connects a passenger to a specific seat they are assigned on a flight."@en ;
+                                                                                                      rdfs:label "has assigned seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat> rdf:type owl:ObjectProperty ,
+                                                                                                       owl:FunctionalProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                              rdfs:comment "Links a flight to the specific seat occupied during the flight."@en ;
+                                                                                              rdfs:label "has seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> rdf:type owl:ObjectProperty ,
+                                                                                                               owl:FunctionalProperty ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                                      rdfs:comment "Indicates the country in which the city is located."@en ;
+                                                                                                      rdfs:label "is part of country"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/livesInCountry
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/livesInCountry> rdf:type owl:ObjectProperty ,
+                                                                                                              owl:FunctionalProperty ;
+                                                                                                     rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                     rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                                     rdfs:comment "Indicates the country where the passenger resides."@en ;
+                                                                                                     rdfs:label "lives in country"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> rdf:type owl:ObjectProperty ,
+                                                                                                             owl:FunctionalProperty ;
+                                                                                                    rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                    rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                    rdfs:comment "Indicates the city where the airport is located."@en ;
+                                                                                                    rdfs:label "located in city"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline> rdf:type owl:ObjectProperty ,
+                                                                                                                 owl:FunctionalProperty ;
+                                                                                                        rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                        rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline> ;
+                                                                                                        rdfs:comment "Indicates the airline that operates a specific flight."@en ;
+                                                                                                        rdfs:label "operated by airline"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/providesService
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/providesService> rdf:type owl:ObjectProperty ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service> ;
+                                                                                                      rdfs:comment "Associates an airline with the services it provides, such as cabin or ground services."@en ;
+                                                                                                      rdfs:label "provides service"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/receivesService
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/receivesService> rdf:type owl:ObjectProperty ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service> ;
+                                                                                                      rdfs:comment "Links a seat to specific services provided during a flight, reflecting the level and type of service based on the seat’s location and class." ;
+                                                                                                      rdfs:label "receives service"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight> rdf:type owl:ObjectProperty ,
+                                                                                                              owl:FunctionalProperty ;
+                                                                                                     rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                                     rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                     rdfs:comment "Associates a review with the specific flight it addresses."@en ;
+                                                                                                     rdfs:label "review of flight"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger> rdf:type owl:ObjectProperty ,
+                                                                                                                   owl:FunctionalProperty ;
+                                                                                                          rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                                          rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                          rdfs:comment "Connects a flight review to the passenger who wrote the review."@en ;
+                                                                                                          rdfs:label "reviewed by passenger"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/worksOnFlight
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/worksOnFlight> rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember> ;
+                                                                                                    rdfs:range <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                    rdfs:comment "Connects a crew member to the flights they work on."@en ;
+                                                                                                    rdfs:label "works on flight"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/comment
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/comment> rdf:type owl:DatatypeProperty ,
+                                                                                                       owl:FunctionalProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                              rdfs:range xsd:string ;
+                                                                                              rdfs:comment "The detailed text content of the flight review." ;
+                                                                                              rdfs:label "comment"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/date
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/date> rdf:type owl:DatatypeProperty ,
+                                                                                                    owl:FunctionalProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                           rdfs:range xsd:dateTime ;
+                                                                                           rdfs:comment "The date on which the flight takes place."@en ;
+                                                                                           rdfs:label "date"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/model
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/model> rdf:type owl:DatatypeProperty ,
+                                                                                                     owl:FunctionalProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft> ;
+                                                                                            rdfs:range xsd:string ;
+                                                                                            rdfs:comment "The model of the aircraft used for a flight."@en ;
+                                                                                            rdfs:label "model"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> rdf:type owl:DatatypeProperty ,
+                                                                                                    owl:FunctionalProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place> ;
+                                                                                           rdfs:range xsd:string ;
+                                                                                           rdfs:comment "The name of the geographical location, such as a city, country, or airport."@en ;
+                                                                                           rdfs:label "name"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/number
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/number> rdf:type owl:DatatypeProperty ,
+                                                                                                      owl:FunctionalProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                             rdfs:range xsd:string ;
+                                                                                             rdfs:comment "The unique identifier for each flight."@en ;
+                                                                                             rdfs:label "number"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating> rdf:type owl:DatatypeProperty ,
+                                                                                                      owl:FunctionalProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                             rdfs:range xsd:integer ;
+                                                                                             rdfs:comment "The rating given by a passenger in a flight review."@en ;
+                                                                                             rdfs:label "rating"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/recommendationStatus
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/recommendationStatus> rdf:type owl:DatatypeProperty ,
+                                                                                                                    owl:FunctionalProperty ;
+                                                                                                           rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                                           rdfs:range xsd:boolean ;
+                                                                                                           rdfs:comment "Indicates whether the passenger recommends the flight or not, represented as a boolean value."@en ;
+                                                                                                           rdfs:label "recommendation status"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/title
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/title> rdf:type owl:DatatypeProperty ,
+                                                                                                     owl:FunctionalProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                            rdfs:range xsd:string ;
+                                                                                            rdfs:comment "The title of the flight review, providing a brief summary or headline."@en ;
+                                                                                            rdfs:label "title"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/verified
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/verified> rdf:type owl:DatatypeProperty ,
+                                                                                                        owl:FunctionalProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                               rdfs:range xsd:boolean ;
+                                                                                               rdfs:comment "Indicates whether the flight review has been verified as authentic by the airline or a third-party platform."@en ;
+                                                                                               rdfs:label "verified"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft> rdf:type owl:Class ;
+                                                                                               rdfs:comment "A vehicle designed for air transport"@en ;
+                                                                                               rdfs:label "Aircraft"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline> rdf:type owl:Class ;
+                                                                                              rdfs:comment "A company that provides air transport services"@en ;
+                                                                                              rdfs:label "Airline"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place> ,
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> ;
+                                                                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City>
+                                                                                                              ] ;
+                                                                                              rdfs:comment "A facility used for the arrival, departure, and maintenance of aircraft, equipped with runways and passenger facilities."@en ;
+                                                                                              rdfs:label "Airport"@en ;
+                                                                                              rdfs:sameAs "https://dbpedia.org/page/Airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessClassSeat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessClassSeat> rdf:type owl:Class ;
+                                                                                                        rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                                        rdfs:comment "A high-comfort seat, typically found in the business class section of an aircraft."@en ;
+                                                                                                        rdfs:label "Business Class Seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessTraveller
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessTraveller> rdf:type owl:Class ;
+                                                                                                        rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                        rdfs:comment "A passenger who travels primarily for business purposes."@en ;
+                                                                                                        rdfs:label "Business Traveller"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CabinService
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CabinService> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service> ;
+                                                                                                   rdfs:comment "Services offered inside the aircraft cabin, such as meals, drinks, and in-flight entertainment."@en ;
+                                                                                                   rdfs:label "Cabin Service"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place> ,
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> ;
+                                                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                             owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country>
+                                                                                                           ] ;
+                                                                                           rdfs:comment "An urban area that serves as a hub."@en ;
+                                                                                           rdfs:label "City"@en ;
+                                                                                           rdfs:sameAs "https://dbpedia.org/page/City"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place> ;
+                                                                                              rdfs:comment "A distinct territorial body or political entity known for its sovereignty and governance."@en ;
+                                                                                              rdfs:label "Country"@en ;
+                                                                                              rdfs:sameAs "https://dbpedia.org/page/Country"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember> rdf:type owl:Class ;
+                                                                                                 rdfs:comment "An individual who is part of the flight staff"@en ;
+                                                                                                 rdfs:label "Crew Member"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/DomesticFlight
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/DomesticFlight> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                     rdfs:comment "A flight that takes place within the boundaries of a single country."@en ;
+                                                                                                     rdfs:label "Domestic Flight"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/EconomySeat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/EconomySeat> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                                  rdfs:comment "A standard seat within the main cabin area, optimized for density and affordability."@en ;
+                                                                                                  rdfs:label "Economy Seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FirstClassSeat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FirstClassSeat> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> ;
+                                                                                                     rdfs:comment "The most spacious seat available on an aircraft, offering premium services."@en ;
+                                                                                                     rdfs:label "First Class Seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat> ;
+                                                                                                               owl:allValuesFrom <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> ;
+                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> ;
+                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft> ;
+                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft>
+                                                                                                             ] ,
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline> ;
+                                                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                               owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline>
+                                                                                                             ] ;
+                                                                                             rdfs:comment "A scheduled journey of an aircraft from one airport to another."@en ;
+                                                                                             rdfs:label "Flight"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightAttendant
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightAttendant> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember> ;
+                                                                                                      rdfs:comment "A crew member who ensures the safety and comfort of passengers aboard a flight."@en ;
+                                                                                                      rdfs:label "Flight Attendant"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight> ;
+                                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                     owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight>
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger> ;
+                                                                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                     owl:onClass <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger>
+                                                                                                                   ] ,
+                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                     owl:onProperty <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating> ;
+                                                                                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                          owl:onDatatype xsd:integer ;
+                                                                                                                                          owl:withRestrictions ( [ xsd:maxInclusive 10
+                                                                                                                                                                 ]
+                                                                                                                                                               )
+                                                                                                                                        ]
+                                                                                                                   ] ;
+                                                                                                   rdfs:comment "A  evaluation or feedback provided by a passenger regarding their experience on a flight."@en ;
+                                                                                                   rdfs:label "Flight Review"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/GroundService
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/GroundService> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service> ;
+                                                                                                    rdfs:comment "Services provided at the airport before departure or after arrival, including check-in and baggage handling."@en ;
+                                                                                                    rdfs:label "Ground Service"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/InternationalFlight
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/InternationalFlight> rdf:type owl:Class ;
+                                                                                                          rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                          rdfs:comment "A flight that crosses international boundaries between two or more countries."@en ;
+                                                                                                          rdfs:label "International Flight"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/LeisureTraveller
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/LeisureTraveller> rdf:type owl:Class ;
+                                                                                                       rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                       rdfs:comment "A passenger who travels primarily for leisure or vacation purposes."@en ;
+                                                                                                       rdfs:label "Leisure Traveller"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> rdf:type owl:Class ;
+                                                                                                rdfs:comment "An individual who travels in an aircraft, potentially with different travel purposes and preferences."@en ;
+                                                                                                rdfs:label "Passenger"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Pilot
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Pilot> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/CrewMember> ;
+                                                                                            rdfs:comment "A crew member trained and certified to operate an aircraft."@en ;
+                                                                                            rdfs:label "Pilot"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Place> rdf:type owl:Class ;
+                                                                                            rdfs:comment "A location that can be geographically identified."@en ;
+                                                                                            rdfs:label "Place"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Seat> rdf:type owl:Class ;
+                                                                                           rdfs:comment "A specific place for a passenger to sit in an aircraft."@en ;
+                                                                                           rdfs:label "Seat"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Service> rdf:type owl:Class ;
+                                                                                              rdfs:comment "Services provided by the airline to enhance passenger experience."@en ;
+                                                                                              rdfs:label "Service"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airbus_A380
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airbus_A380> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft> ;
+                                                                                                  rdfs:comment "Aircraft model of Airbus A380"@en ;
+                                                                                                  rdfs:label "Airbus A380"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ali_Al-Hamed
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ali_Al-Hamed> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                   <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Business_Class_Seat_1A_on_Flight_DOH-LPL> ;
+                                                                                                   <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/livesInCountry> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar> ;
+                                                                                                   rdfs:comment "Ali Al-Hamed Passenger"@en ;
+                                                                                                   rdfs:label "Ali Al-Hamed"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Boeing_787
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Boeing_787> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Aircraft> ;
+                                                                                                 rdfs:comment "Aircraft model of Boeing 787"@en ;
+                                                                                                 rdfs:label "Boeing 787"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Business_Class_Seat_1A_on_Flight_DOH-LPL
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Business_Class_Seat_1A_on_Flight_DOH-LPL> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessClassSeat> ;
+                                                                                                                               rdfs:comment "Business Class Seat 1A on Flight DOH-LPL"@en ;
+                                                                                                                               rdfs:label "Business Class Seat 1A on Flight DOH-LPL"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                           <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar> ;
+                                                                                           rdfs:comment "City Doha"@en ;
+                                                                                           rdfs:label "Doha"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha_Airport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha_Airport> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                   <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha> ;
+                                                                                                   rdfs:comment "Doha Airport"@en ;
+                                                                                                   rdfs:label "Doha Airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Economy_Class_Seat_23C_on_Flight_EDI-LPL
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Economy_Class_Seat_23C_on_Flight_EDI-LPL> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/EconomySeat> ;
+                                                                                                                               rdfs:comment "Economy Class Seat 23C on Flight EDI-LPL"@en ;
+                                                                                                                               rdfs:label "Economy Class Seat 23C on Flight EDI-LPL"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom> ;
+                                                                                                rdfs:comment "City Edinburgh"@en ;
+                                                                                                rdfs:label "Edinburgh"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh_Airport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh_Airport> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh> ;
+                                                                                                        rdfs:comment "Edinburgh Airport"@en ;
+                                                                                                        rdfs:label "Edinburgh Airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_DOH-LPL_01
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_DOH-LPL_01> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool_John_Lennon_Airport> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Doha_Airport> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airbus_A380> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Business_Class_Seat_1A_on_Flight_DOH-LPL> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar_Airways> ;
+                                                                                                        rdfs:comment "Flight 01 from Doha to Liverpool"@en ;
+                                                                                                        rdfs:label "Flight DOH-LPL 01"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_EDI-LPL_01
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_EDI-LPL_01> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool_John_Lennon_Airport> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Edinburgh_Airport> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAircraft> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Boeing_787> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Economy_Class_Seat_23C_on_Flight_EDI-LPL> ;
+                                                                                                        <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/operatedByAirline> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ryanair> ;
+                                                                                                        rdfs:comment "Flight 01 from Edinburgh to Liverpool"@en ;
+                                                                                                        rdfs:label "Flight EDI-LPL 01"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_01
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_01> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_DOH-LPL_01> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ali_Al-Hamed> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating> 9 ;
+                                                                                                       rdfs:comment "Review of Business Class on Flight DOH-LPL by Ali Al-Hamed"@en ;
+                                                                                                       rdfs:label "Flight Review 01"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_02
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_Review_02> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/FlightReview> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewOfFlight> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight_EDI-LPL_01> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/reviewedByPassenger> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Sarah_Johnson> ;
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/rating> 7 ;
+                                                                                                       rdfs:comment "Review of Economy Class on Flight EDI-LPL by Sarah Johnson"@en ;
+                                                                                                       rdfs:label "Flight Review 02"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom> ;
+                                                                                                rdfs:comment "City Liverpool"@en ;
+                                                                                                rdfs:label "Liverpool"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool_John_Lennon_Airport
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool_John_Lennon_Airport> rdf:type owl:NamedIndividual ,
+                                                                                                                             <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                                    <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Liverpool> ;
+                                                                                                                    rdfs:comment "Liverpool John Lennon Airport"@en ;
+                                                                                                                    rdfs:label "Liverpool John Lennon Airport"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                            <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> "Qatar" ;
+                                                                                            rdfs:comment "Country Qatar"@en ;
+                                                                                            rdfs:label "Qatar"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar_Airways
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Qatar_Airways> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline> ;
+                                                                                                    rdfs:comment "Qatar Airways Airline"@en ;
+                                                                                                    rdfs:label "Qatar Airways"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ryanair
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Ryanair> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airline> ;
+                                                                                              rdfs:comment "Ryanair Airline"@en ;
+                                                                                              rdfs:label "Ryanair"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Sarah_Johnson
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Sarah_Johnson> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Passenger> ;
+                                                                                                    <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Economy_Class_Seat_23C_on_Flight_EDI-LPL> ;
+                                                                                                    <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/livesInCountry> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom> ;
+                                                                                                    rdfs:comment "Sarah Johnson Passenger"@en ;
+                                                                                                    rdfs:label "Sarah Johnson"@en .
+
+
+###  http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom
+<http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/United_Kingdom> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                                     <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> "United Kingdom" ;
+                                                                                                     rdfs:comment "Country United Kingdom"@en ;
+                                                                                                     rdfs:label "United Kingdom"@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#flight> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#airportFrom> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#cityFrom> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#countryFrom> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#airportAt> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#cityAt> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#countryAt> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#nFrom> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#nAt> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#seat> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#passenger> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportFrom>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityFrom>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryFrom>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#airportFrom>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportFrom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cityFrom>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityFrom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#countryFrom>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportAt>
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityAt>
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryAt>
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#airportAt>
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportAt> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cityAt>
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityAt> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#countryAt>
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryFrom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#nFrom>
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryAt> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#nAt>
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( <urn:swrl:var#nFrom>
+                                                                                                                                                                                                                                                                         <urn:swrl:var#nAt>
+                                                                                                                                                                                                                                                                       )
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/DomesticFlight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportFrom>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityFrom>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryFrom>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/departsFromAirport> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#airportFrom>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportFrom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cityFrom>
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityFrom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#countryFrom>
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Airport> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportAt>
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/City> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityAt>
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Country> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryAt>
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/arrivesAtAirport> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#airportAt>
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/locatedInCity> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#airportAt> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#cityAt>
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                               rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/isPartOfCountry> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#cityAt> ;
+                                                                                                                                                                                           <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#countryAt>
+                                                                                                                                                                                         ] ;
+                                                                                                                                                                               rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                          rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryFrom> ;
+                                                                                                                                                                                                      <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#nFrom>
+                                                                                                                                                                                                    ] ;
+                                                                                                                                                                                          rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                     rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/name> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#countryAt> ;
+                                                                                                                                                                                                                 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#nAt>
+                                                                                                                                                                                                               ] ;
+                                                                                                                                                                                                     rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                                                                rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#notEqual> ;
+                                                                                                                                                                                                                            <http://www.w3.org/2003/11/swrl#arguments> ( <urn:swrl:var#nFrom>
+                                                                                                                                                                                                                                                                         <urn:swrl:var#nAt>
+                                                                                                                                                                                                                                                                       )
+                                                                                                                                                                                                                          ] ;
+                                                                                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                                                                                              ]
+                                                                                                                                                                                                   ]
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/InternationalFlight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/Flight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessClassSeat> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#seat>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasSeat> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#flight> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#seat>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/hasAssignedSeat> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#passenger> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#seat>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/soblechero/ontologies/2024/3/flight-satisfaction-surveys/BusinessTraveller> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#passenger>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
